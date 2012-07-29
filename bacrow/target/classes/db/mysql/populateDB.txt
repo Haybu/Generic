@@ -1,0 +1,14 @@
+delete from t_ci
+;
+insert into t_ci (cinum,label,location,type) values('CI0001','CILABEL-1','CHICAGO','FRAME')
+;
+insert into t_ci (cinum,label,location,type) values('CI0002','CILABEL-2','DALLAS','COMSYS')
+;
+insert into t_ci (cinum,label,location,type) values('CI0003','CILABEL-3','AUSTIN','SOFTWR')
+;
+
+insert into t_cirelation(parentci,childci,relname,direction) values('CI0001','CI0002','RUNS-ON',1)
+;
+insert into t_cirelation(parentci,childci,relname,direction) values('CI0002','CI0003','INSTALLED-ON',1)
+;
+
