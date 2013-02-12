@@ -1,0 +1,22 @@
+/* Create tables */
+/* It is using test database */
+
+CREATE TABLE IF NOT EXISTS T_CI (
+  	id 				INT 	NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  	CINUM 			VARCHAR(20) NOT NULL,
+  	LABEL 			VARCHAR(20),
+	LOCATION 		VARCHAR(20),
+	TYPE 			VARCHAR(20)
+) engine=InnoDB
+;
+
+
+CREATE TABLE IF NOT EXISTS T_CIRELATION (
+  	id 				INT 	NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  	parentci 		VARCHAR(20) NOT NULL,
+  	childci	    VARCHAR(20),
+	RELNAME 		VARCHAR(20),
+	DIRECTION 		INT
+) engine=InnoDB
+;
+
